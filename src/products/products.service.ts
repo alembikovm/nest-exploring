@@ -10,7 +10,6 @@ export class ProductsService {
   constructor(
     @InjectModel(Product.name) private productModel: Model<ProductDocument>,
   ) {}
-  private products = [];
 
   async getAll(): Promise<Product[]> {
     return this.productModel.find().exec();
